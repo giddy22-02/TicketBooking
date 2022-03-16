@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +10,13 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <!--Custom CSS file-->
     <link rel="stylesheet" href="../assets/css/style.css">
-
 </head>
-
 <body>
     <!--Login Container Start-->
     <div class="container text-center">
         <!--Form Start-->
         <form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight:800;">Super Admin-Login</p>
+            <p class="login-text" style="font-size: 2rem; font-weight:800;">Super Admin</p>
             <div class="input-group">
                 <input type="email" placeholder="Email" name="email" required>
             </div>
