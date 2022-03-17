@@ -81,7 +81,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="drivers.php">
                                 <i class="bi bi-people" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Drivers</span>
                             </a>
