@@ -56,7 +56,7 @@
                     <h3 class="p-3 text-light">Admin</h3>
                     <hr class="text-light">
                     <ul class="nav flex-column">
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="admins.php">
                                 <i class="fa fa-user" style="font-size: 2rem; color: white;"></i>
                                 <span class=" text-light ml-2"> Admins</span>
@@ -76,16 +76,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="bi bi-diagram-3-fill" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Seats</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
                                 <i class="fa fa-users" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Customers</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-people" style="font-size: 2rem; color:  white;"></i>
+                                <span class=" text-light ml-2">Drivers</span>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
             </nav>
@@ -100,8 +101,35 @@
                 <h1 class="h2">Dashboard</h1>
                 <div class="row">
                     <!--====Card 1- Total No of Buses===-->
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <div class="card h-100 rounded" style="background: #8c19c2; font-weight: 600;">
+                            <div class="card-header text-light fw-bold">
+                                Admins
+                            </div>
+                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="fa fa-user" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                         $query ="SELECT  id FROM admins ORDER BY id";
+                                         $query_run =mysqli_query($con, $query);
+                                         $row = mysqli_num_rows($query_run);
+                                         echo '<h2>'.$row.'</h2>';
+                                         ?>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 1- Total No of Buses===-->
+                    <!--====Card 2- Routes===-->
+                    <div class="col-md-2 mb-3">
+                        <div class="card  h-100 rounded" style="background: #8c19c2; font-weight: 600;">
                             <div class="card-header text-light fw-bold">
                                 Buses
                             </div>
@@ -114,20 +142,19 @@
                                     </div>
                                     <div class="col-md-6">
                                         <?php
-                                   // $query ="SELECT  id FROM candidates ORDER BY id";
-                                   // $query_run =mysqli_query($con, $query);
-                                   // $row = mysqli_num_rows($query_run);
-                                   // echo '<h2>'.$row.'</h2>';
+                                    //$query ="SELECT  id FROM voters ORDER BY id";
+                                    //$query_run =mysqli_query($con, $query);
+                                    //$row = mysqli_num_rows($query_run);
+                                    //echo '<h2>'.$row.'</h2>';
                                     ?>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                    <!--====Card 1- Total No of Buses===-->
                     <!--====Card 2- Routes===-->
-                    <div class="col-md-3 mb-3">
+                    <!--====Card 3- Seats===-->
+                    <div class="col-md-2 mb-3">
                         <div class="card  h-100 rounded" style="background: #8c19c2; font-weight: 600;">
                             <div class="card-header text-light fw-bold">
                                 Routes
@@ -151,35 +178,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--====Card 2- Routes===-->
-                    <!--====Card 3- Seats===-->
-                    <div class="col-md-3 mb-3">
-                        <div class="card  h-100 rounded" style="background: #8c19c2; font-weight: 600;">
-                            <div class="card-header text-light fw-bold">
-                                Seats
-                            </div>
-                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span>
-                                            <i class="bi bi-diagram-3-fill" style="font-size: 2.5rem;"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!--====Card 3- Seats===-->
                     <!--====Card 4- Customers===-->
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-2 mb-3">
                         <div class="card h-100 rounded" style="background: #8c19c2; font-weight: 600;">
                             <div class="card-header text-light fw-bold">
                                 Customers
@@ -204,4 +205,30 @@
                         </div>
                     </div>
                     <!--====Card 4- Customers===-->
+                    <!--====Card 5- Drivers===-->
+                    <div class="col-md-2 mb-3">
+                        <div class="card h-100 rounded" style="background: #8c19c2; font-weight: 600;">
+                            <div class="card-header text-light fw-bold">
+                                Drivers
+                            </div>
+                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span>
+                                            <i class="bi bi-people" style="font-size: 2.5rem;"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <?php
+                                    //$query ="SELECT  id FROM voters ORDER BY id";
+                                    //$query_run =mysqli_query($con, $query);
+                                    //$row = mysqli_num_rows($query_run);
+                                    //echo '<h2>'.$row.'</h2>';
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--====Card 5- Drivers===-->
                 </div>
