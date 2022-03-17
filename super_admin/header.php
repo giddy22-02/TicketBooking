@@ -220,11 +220,11 @@
                                     </div>
                                     <div class="col-md-6">
                                         <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
-                                    ?>
+                                        $query ="SELECT  id FROM drivers ORDER BY id";
+                                        $query_run =mysqli_query($con, $query);
+                                        $row = mysqli_num_rows($query_run);
+                                        echo '<h2>'.$row.'</h2>';
+                                        ?>
                                     </div>
                                 </div>
                             </div>
