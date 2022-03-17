@@ -1,8 +1,8 @@
 <!--Header Section-->
 <?php
-include 'includes/header.php';
+include 'header.php';
 ?>
 <!--Footer Section-->
 <?php
-include 'includes/footer.php';
+include 'footer.php';
 ?>

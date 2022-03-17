@@ -13,14 +13,14 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 
 <body>
     <nav class="navbar navbar-light p-3" style="background:#8c19c2">
         <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
             <!---Logo------------------------->
-            <img src="../img/logo.png" alt="logo" width="60" height="60">
+            <img src="../assets/images/logo.png" alt="logo" width="60" height="60">
             <!---Logo------------------------->
             <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse"
                 data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
