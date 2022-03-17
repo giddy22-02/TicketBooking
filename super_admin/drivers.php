@@ -2,7 +2,6 @@
 <?php
 include ('../actions/connect.php');
 include 'header.php';
-
 ?>
 <div class="card my-3 table-responsive">
     <div class="card-header fw-bold" style="background:#8c19c2;">
@@ -70,7 +69,6 @@ include 'header.php';
             </div>
         </div>
     </div>
-
     <table class="table">
         <thead>
             <tr>
