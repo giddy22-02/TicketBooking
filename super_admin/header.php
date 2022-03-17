@@ -56,6 +56,12 @@
                     <h3 class="p-3 text-light">Admin</h3>
                     <hr class="text-light">
                     <ul class="nav flex-column">
+                         <li class="nav-item">
+                            <a class="nav-link" href="admins.php">
+                                <i class="fa fa-user" style="font-size: 2rem; color: white;"></i>
+                                <span class=" text-light ml-2"> Admins</span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fa fa-bus" style="font-size: 2rem; color: white;"></i>
