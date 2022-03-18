@@ -19,11 +19,11 @@ session_start();
         if ($result) {
            
             $_SESSION['status'] = "Inserted Successfully";
-            header("Location: ../drivers.php");
+            header("Location: ../buses.php");
         }else {
             
              $_SESSION['status'] = "Something Went wrong";
-             header("Location: ../drivers.php");
+             header("Location: ../buses.php");
         }
     }
 

@@ -66,38 +66,50 @@ header("Location:../index.php");
                     <ul class="nav flex-column">
                         <li class="nav-item p-2">
                             <a class="nav-link" href="home.php">
-                                <i class="fa fa-home" style="font-size: 2rem; color: white;"></i>
-                                <span class=" text-light ml-2"> Home</span>
+                                <i class="fa fa-home " style="font-size: 2rem; color: white;"></i>
+                                <span class=" text-light ml-2 p-3"> Home</span>
                             </a>
                         </li>
+                         <li class="nav-item p-2">
+                             <a class="nav-link" href="managers.php">
+                                 <i class="fa fa-user " style="font-size: 2rem; color: white;"></i>
+                                 <span class=" text-light ml-2 p-3"> Managers</span>
+                             </a>
+                         </li>
                         <li class="nav-item p-2">
                             <a class="nav-link" href="admins.php">
-                                <i class="fa fa-user" style="font-size: 2rem; color: white;"></i>
-                                <span class=" text-light ml-2"> Admins</span>
+                                <i class="fa fa-user-o" style="font-size: 2rem; color: white;"></i>
+                                <span class=" text-light ml-2 p-3"> Admins</span>
                             </a>
                         </li>
                         <li class="nav-item p-2">
                             <a class="nav-link" href="buses.php">
-                                <i class="fa fa-bus" style="font-size: 2rem; color: white;"></i>
-                                <span class=" text-light ml-2"> Buses</span>
+                                <i class="fa fa-bus " style="font-size: 2rem; color: white;"></i>
+                                <span class=" text-light ml-2 p-3"> Buses</span>
                             </a>
                         </li>
                         <li class="nav-item p-2">
                             <a class="nav-link" href="routes.php">
                                 <i class="fa fa-road" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Routes</span>
+                                <span class=" text-light ml-2 p-3">Routes</span>
                             </a>
                         </li>
                         <li class="nav-item p-2">
-                            <a class="nav-link" href="superadmin.php">
+                            <a class="nav-link" href="#">
                                 <i class="fa fa-users" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Customers</span>
+                                <span class=" text-light ml-2 p-3">Customers</span>
                             </a>
                         </li>
                         <li class="nav-item p-2">
                             <a class="nav-link" href="drivers.php">
                                 <i class="bi bi-people" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Drivers</span>
+                                <span class=" text-light ml-2 p-3">Drivers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="branches.php">
+                                <i class="fa fa-industry" style="font-size: 2rem; color:  white;"></i>
+                                <span class=" text-light ml-2 p-3">Branches</span>
                             </a>
                         </li>
 
@@ -108,8 +120,14 @@ header("Location:../index.php");
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="home.php">Home</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="managers">Managers</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="admins.php">Admins</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="buses.php">Buses</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="routes.php">Routes</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="customers.php">Customers</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="drivers.php">Drivers</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="branches.php">Branches</a></li>
                     </ol>
                 </nav>
                 <h1 class="h2">Dashboard</h1>
