@@ -11,7 +11,19 @@ include 'header.php';
                 <h3>Admins</h3>
             </div>
             <div class="col-md-4 text-center">
-
+                <!--Notification Message upon submission-->
+                <?php
+                if(isset($_SESSION['status']))
+                {?>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">   
+                        </button>
+                    </div>
+                    <?php
+                    unset($_SESSION['status']);
+                }?>
+                <!--Notification Message upon submission-->
             </div>
             <div class="col-md-4 text-center">
                 <!-- Modal  For Adding New Candidates-->
@@ -31,9 +43,9 @@ include 'header.php';
                                         <input type="text" class="form-control w-80 m-auto" name="branch"
                                             placeholder="Branch" required="required">
                                     </div>
-                                     <div class="mb-3">
-                                         <input type="file" class="form-control w-80 m-auto" name="photo">
-                                     </div>
+                                    <div class="mb-3">
+                                        <input type="file" class="form-control w-80 m-auto" name="photo">
+                                    </div>
                                     <div class="mb-3">
                                         <input type="number" class="form-control w-80 m-auto" name="idno"
                                             placeholder="ID No" required="required" minlength="10" maxlength="10">
@@ -55,15 +67,15 @@ include 'header.php';
                                             placeholder="Phone No" required="required">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="password" class="form-control w-80 m-auto" name="password" placeholder="Password"
-                                            required="required">
+                                        <input type="password" class="form-control w-80 m-auto" name="password"
+                                            placeholder="Password" required="required">
                                     </div>
                                 </div>
                                 <div class="modal-footer" style="background:#8c19c2; color: white;">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     <button type="submit" name="submit" class="btn btn-success">Save changes</button>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

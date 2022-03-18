@@ -1,6 +1,6 @@
 <?php
 include ('../../actions/connect.php');
-//session_start();
+session_start();
     $branch = $_POST['branch'];
     $regno = $_POST['regno'];
     $yop = $_POST['yop'];
@@ -17,13 +17,13 @@ include ('../../actions/connect.php');
         $sql = "INSERT INTO buses (branch,regno,yop,color)VALUES ('$branch',' $regno','$yop','$color')";
         $result = mysqli_query($con, $sql);
         if ($result) {
-             echo "Added successfully";
-            //$_SESSION['status'] = "Inserted Successfully";
-            //header("Location: ../drivers.php");
+           
+            $_SESSION['status'] = "Inserted Successfully";
+            header("Location: ../drivers.php");
         }else {
-             die(mysqli_error($con));
-           // $_SESSION['status'] = "Something Went wrong";
-            //header("Location: ../drivers.php");
+            
+             $_SESSION['status'] = "Something Went wrong";
+             header("Location: ../drivers.php");
         }
     }
 

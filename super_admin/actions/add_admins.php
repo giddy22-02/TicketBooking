@@ -1,6 +1,6 @@
 <?php
 include ('../../actions/connect.php');
-//session_start();
+session_start();
     $branch = $_POST['branch'];
     $image = $_FILES['photo']['name'];
     $tmp_name = $_FILES['photo']['tmp_name'];
@@ -22,12 +22,12 @@ include ('../../actions/connect.php');
         $sql = "INSERT INTO admins (branch, photo, idno,fullname,username,email,phone,password)VALUES ('$branch','$image','$idno','$fullname','$username','$email','$phone','$password')";
         $result = mysqli_query($con, $sql);
         if ($result) {
-             echo "Added successfully";
-            //$_SESSION['status'] = "Inserted Successfully";
+           
+            $_SESSION['status'] = "Inserted Successfully";
             header("Location: ../admins.php");
         }else {
-             echo "connection problem";
-           // $_SESSION['status'] = "Something Went wrong";
+           
+            $_SESSION['status'] = "Something Went wrong";
             header("Location: ../admins.php");
         }
     }

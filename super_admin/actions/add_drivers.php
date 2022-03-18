@@ -1,6 +1,6 @@
 <?php
 include ('../../actions/connect.php');
-//session_start();
+session_start();
     $branch = $_POST['branch'];
     $image = $_FILES['photo']['name'];
     $tmp_name = $_FILES['photo']['tmp_name'];
@@ -21,12 +21,12 @@ include ('../../actions/connect.php');
         $sql = "INSERT INTO drivers (branch, photo, idno,fullname,email,phone)VALUES ('$branch','$image','$idno','$fullname','$email','$phone')";
         $result = mysqli_query($con, $sql);
         if ($result) {
-             echo "Added successfully";
-            //$_SESSION['status'] = "Inserted Successfully";
+         
+            $_SESSION['status'] = "Inserted Successfully";
             header("Location: ../drivers.php");
         }else {
-             echo "connection problem";
-           // $_SESSION['status'] = "Something Went wrong";
+           
+           $_SESSION['status'] = "Something Went wrong";
             header("Location: ../drivers.php");
         }
     }
