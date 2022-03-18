@@ -28,6 +28,10 @@ include 'header.php';
                                 </div>
                                 <div class="modal-body">
                                     <div class="mb-3">
+                                        <input type="email" class="form-control w-80 m-auto" name="email"
+                                            placeholder="Email Address" required="required">
+                                    </div>
+                                    <div class="mb-3">
                                         <input type="text" class="form-control w-80 m-auto" name="username"
                                             placeholder="Username" required="required">
                                     </div>

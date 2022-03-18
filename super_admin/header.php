@@ -1,3 +1,12 @@
+<?php
+include ('../actions/connect.php');
+//===============Session Start====================
+session_start();
+if(!isset($_SESSION['username'])){
+header("Location:../index.php");
+}
+//===============Session Start====================
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +27,7 @@
 
 <body>
     <nav class="navbar navbar-light p-3" style="background:#8c19c2">
-        <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+        <div class="d-flex col-12 col-md-6 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
             <!---Logo------------------------->
             <img src="../assets/images/logo.png" alt="logo" width="60" height="60">
             <!---Logo------------------------->
@@ -27,24 +36,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        <div class="col-12 col-md-4 col-lg-2">
+        <div class="col-12 col-md-6 col-lg-2">
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
         </div>
-        <!--
-        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-expanded="false">
-                    Hello, John Doe
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Messages</a></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
--->
+
+
+
+
     </nav>
 
     <div class="container-fluid">
@@ -53,40 +51,56 @@
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background:#8c19c2">
                 <div class="position-sticky pt-md-5">
                     <hr class="text-light">
-                    <h3 class="p-3 text-light">Admin</h3>
+                    <div class="dropdown my-5">
+                        <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <?php echo "Hello ". $_SESSION['username'];?>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+                        </ul>
+                    </div>
+
                     <hr class="text-light">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="home.php">
+                                <i class="fa fa-home" style="font-size: 2rem; color: white;"></i>
+                                <span class=" text-light ml-2"> Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item p-2">
                             <a class="nav-link" href="admins.php">
                                 <i class="fa fa-user" style="font-size: 2rem; color: white;"></i>
                                 <span class=" text-light ml-2"> Admins</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item p-2">
                             <a class="nav-link" href="buses.php">
                                 <i class="fa fa-bus" style="font-size: 2rem; color: white;"></i>
                                 <span class=" text-light ml-2"> Buses</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item p-2">
                             <a class="nav-link" href="routes.php">
                                 <i class="fa fa-road" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Routes</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="superadmin.php">
                                 <i class="fa fa-users" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Customers</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item p-2">
                             <a class="nav-link" href="drivers.php">
                                 <i class="bi bi-people" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Drivers</span>
                             </a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </nav>
