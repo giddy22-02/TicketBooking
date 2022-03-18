@@ -98,6 +98,12 @@ header("Location:../index.php");
                                 <span class=" text-light ml-2">Customers</span>
                             </a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="receipt.php">
+                                <i class="fa fa-list" style="font-size: 2rem; color:  white;"></i>
+                                <span class=" text-light ml-2">Receipt</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
