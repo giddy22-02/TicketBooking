@@ -59,19 +59,41 @@ include 'header.php';
             </div>
             <hr>
             <div class="customer-info">
-                <h6 class="text-center">Passenger's Information</h6>
+                <h6>Passenger's Information</h6>
                 <p>Name:</p>
-                <p>Phone:</p>
-                <div class="row fw-bold">
+                <div class="row">
                     <div class="col-md-6">
-                        From:
+                       <p>Phone:</p>
                     </div>
-                     <div class="col-md-6">
-                        To:
-                     </div>
+                    <div class="col-md-6">
+                        <p>Amount:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>From:</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>To:</b>
+                    </div>
                 </div>
             </div>
             <hr>
+            <div class="car-info">
+                <h6>Car Information</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <b>Reg No:</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Driver:</b>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="admin">
+                <p>Serverd by:</p>
+            </div>
         </div>
     </div>
 </div>
