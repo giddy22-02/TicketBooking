@@ -1,3 +1,12 @@
+<?php
+include ('../actions/connect.php');
+//===============Session Start====================
+session_start();
+if(!isset($_SESSION['username'])){
+header("Location:../index.php");
+}
+//===============Session Start====================
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +62,16 @@
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background:#8c19c2">
                 <div class="position-sticky pt-md-5">
                     <hr class="text-light">
-                    <h3 class="p-3 text-light">Admin</h3>
+                     <div class="dropdown my-5">
+                        <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <?php echo "Hello ". $_SESSION['username'];?>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+                        </ul>
+                    </div>
                     <hr class="text-light">
                     <ul class="nav flex-column">
                         <li class="nav-item">
