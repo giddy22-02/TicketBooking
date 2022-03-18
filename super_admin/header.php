@@ -63,7 +63,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="buses.php">
                                 <i class="fa fa-bus" style="font-size: 2rem; color: white;"></i>
                                 <span class=" text-light ml-2"> Buses</span>
                             </a>
@@ -142,10 +142,10 @@
                                     </div>
                                     <div class="col-md-6">
                                         <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
+                                        $query ="SELECT  id FROM buses ORDER BY id";
+                                        $query_run =mysqli_query($con, $query);
+                                        $row = mysqli_num_rows($query_run);
+                                        echo '<h2>'.$row.'</h2>';
                                     ?>
                                     </div>
                                 </div>
