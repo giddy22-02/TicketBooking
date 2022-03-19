@@ -5,6 +5,8 @@ session_start();
 if(!isset($_SESSION['username'])){
 header("Location:../index.php");
 }
+
+
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -23,6 +25,11 @@ header("Location:../index.php");
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <style>
+        hr.receipt{
+            border-top: 1px dashed #8c19c2;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,7 +106,7 @@ header("Location:../index.php");
                             </a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="receipt.php">
+                            <a class="nav-link" href="bookings.php">
                                 <i class="fa fa-list" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Receipt</span>
                             </a>

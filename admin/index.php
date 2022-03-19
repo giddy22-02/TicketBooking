@@ -5,6 +5,8 @@ error_reporting(0);
 if(isset($_SESSION['username'])){
     header("Location: index.php");
 }
+
+
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -12,7 +14,9 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($con, $sql);
     if($result-> num_rows >0){
         $row = mysqli_fetch_assoc($result);
+        $branch=mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
+         $_SESSION['branch'] = $branch['branch'];
         header("Location:home.php");
     }else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";
