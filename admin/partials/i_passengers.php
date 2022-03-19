@@ -18,7 +18,7 @@
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="edit" class="btn btn-success" data-target="#addnew" value="Edit"></th>
     </form>
-     <form action="partials/updatedata.php" Method="POST">
+     <form action="bookings.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="edit" class="btn btn-info" data-target="#addnew" value="Book"></th>
     </form>
