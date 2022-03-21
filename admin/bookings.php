@@ -2,9 +2,10 @@
 include ('../actions/connect.php');
 include 'header.php';
 ?>
-<div class="row my-3 p-3">
-    <div class="col-md-8 p-2">
+<div class="row my-3 p-3" >
+    <div class="col-md-8 p-2"  >
         <form action="actions/add_bookings.php" method="POST" enctype="multipart/form-data" lass="p-3">
+            
             <div class="modal-content">
                 <div class="modal-body">
                     <h5>Booking</h5>
@@ -129,39 +130,9 @@ include 'header.php';
         </form>
     </div>
     <div class="col-md-4 p-2">
-        <p><input type="button" class="btn btn-secondary" onclick="myPrint('receipt')" value="Print Receipt"></p>
-        <div class="container" id="receipt">
-            <fieldset">
-            <pre>
-                       <img src="../assets/images/logo2.png" width="60" height="60">
-                    <small>Muchai Travellers</small>
-                    <small>P.O BOX 1-00100, Nairobi</small>
-                    <small>info@muchaitravellers.org</small>
-                   <small>+254789365/+254725485960</small>
-<hr class="receipt">
-<small><b>Passenger's Information</b></small>
-<small>Name:</small>                             <small>Phone:</small>
-<small>From:</small>                             <small>To:</small>
-<small>Date:</small>                             <small>Amount:</small>
-<small><b>Car's Information</b></small>
-<small>Bus Reg No:</small>                       <small>Driver:</small>
-<small>Serverd by:</small>
-<hr class="receipt">
-<small>Thank you for Choosing Muchai Travellers</small><br>
-<small>Always Welcome</small>
-                </pre>
-            </fieldset>
-        </div>
-        <!--Js-->
-        <script>
-            function myPrint(receipt) {
-                var printdata = document.getElementById(receipt);
-                newwin = window.open("");
-                newwin.document.write(printdata.outerHTML);
-                newwin.print();
-                newwin.close();
-            }
-        </script>
+        <?php
+        include 'actions/edit.php';
+        ?>
     </div>
 </div>
 <?php

@@ -1,4 +1,5 @@
-<div class="card my-3 table-responsive">
+<p><input type="button" class="btn btn-secondary" onclick="myPrint('receipt')" value="Print Receipt"></p>
+<div class="card my-3 table-responsive" id="receipt">
     <div class="card-header fw-bold" style="background:#8c19c2;">
         <div class="row">
             <div class="col-md-4 text-left text-light">
@@ -44,3 +45,12 @@
         </tbody>
     </table>
 </div>
+ <script>
+            function myPrint(receipt) {
+                var printdata = document.getElementById(receipt);
+                newwin = window.open("");
+                newwin.document.write(printdata.outerHTML);
+                newwin.print();
+                newwin.close();
+            }
+        </script>
