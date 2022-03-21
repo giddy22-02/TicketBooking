@@ -1,7 +1,7 @@
 <!--SQL QUERY START HERE-->
 <?php
  $sql ="SELECT *FROM bookings
-  ORDER BY id";
+  ORDER BY  id  DESC";
    $query =$con->query($sql);
    WHILE($row=$query->fetch_assoc())
    {
@@ -18,9 +18,9 @@
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="edit" class="btn btn-success" data-target="#addnew" value="Edit"></th>
     </form>
-     <form action="bookings.php" Method="POST">
+     <form action="checkout.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
-        <th><input type="submit" name="edit" class="btn btn-info" data-target="#addnew" value="Book"></th>
+        <th><input type="submit" name="edit" class="btn btn-info" data-target="#addnew" value="Checkout"></th>
     </form>
     <form action="partials/delete.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">

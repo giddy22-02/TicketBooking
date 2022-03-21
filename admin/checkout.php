@@ -51,10 +51,10 @@ include 'header.php';
                             </div>
                             <div class="col-md-3">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="route">To</label>
                                     </div>
-                                    <div class="col-md-9">
+                                    <div class="col-md-10">
                                         <select name="too" class="form-control w-80 m-auto">
                                             <option>--Select--</option>
                                             <option value="Nyeri">Nyeri</option>
@@ -129,7 +129,10 @@ include 'header.php';
         </form>
     </div>
     <div class="col-md-5 ">
-        <img src="../assets/images/image.jpeg" alt="">
+        <?php
+        include 'actions/receipt.php';
+        ?>
+         <p><input type="button" class=" align-left btn btn-secondary" onclick="myPrint('receipt')" value="Print Receipt"></p>
     </div>
 </div>
 <div class="row">

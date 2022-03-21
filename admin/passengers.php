@@ -1,5 +1,5 @@
-<p><input type="button" class="btn btn-secondary" onclick="myPrint('receipt')" value="Print Receipt"></p>
-<div class="card my-3 table-responsive" id="receipt">
+
+<div class="card my-3 table-responsive">
     <div class="card-header fw-bold" style="background:#8c19c2;">
         <div class="row">
             <div class="col-md-4 text-left text-light">

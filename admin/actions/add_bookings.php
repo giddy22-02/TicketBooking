@@ -17,11 +17,11 @@ session_start();
         if ($result) {
            
             $_SESSION['status'] = "Inserted Successfully";
-            header("Location: ../bookings.php");
+           header("Location: ../bookings.php");
         }else {
            
             $_SESSION['status'] = "Something Went wrong";
-            header("Location: ../bookings.php");
+           header("Location: ../bookings.php");
         }
     
 

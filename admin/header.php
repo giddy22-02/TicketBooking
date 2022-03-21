@@ -46,21 +46,7 @@ header("Location:../index.php");
         <div class="col-12 col-md-4 col-lg-2">
             <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
         </div>
-        <!--
-        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-expanded="false">
-                    Hello, John Doe
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Messages</a></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
--->
+        
     </nav>
 
     <div class="container-fluid">
@@ -81,34 +67,10 @@ header("Location:../index.php");
                     </div>
                     <hr class="text-light">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fa fa-bus" style="font-size: 2rem; color: white;"></i>
-                                <span class=" text-light ml-2"> Buses</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fa fa-road" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Routes</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="bi bi-diagram-3-fill" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Seats</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fa fa-users" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Customers</span>
-                            </a>
-                        </li>
                          <li class="nav-item">
                             <a class="nav-link" href="bookings.php">
                                 <i class="fa fa-list" style="font-size: 2rem; color:  white;"></i>
-                                <span class=" text-light ml-2">Receipt</span>
+                                <span class=" text-light ml-2">Booking</span>
                             </a>
                         </li>
                     </ul>
@@ -122,111 +84,3 @@ header("Location:../index.php");
                         <li class="breadcrumb-item active" aria-current="page">Overview</li>
                     </ol>
                 </nav>
-                <h1 class="h2">Dashboard</h1>
-                <div class="row">
-                    <!--====Card 1- Total No of Buses===-->
-                    <div class="col-md-3 mb-3">
-                        <div class="card h-100 rounded" style="background: #8c19c2; font-weight: 600;">
-                            <div class="card-header text-light fw-bold">
-                                Buses
-                            </div>
-                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span>
-                                            <i class="fa fa-bus" style="font-size: 2.5rem;"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php
-                                   // $query ="SELECT  id FROM candidates ORDER BY id";
-                                   // $query_run =mysqli_query($con, $query);
-                                   // $row = mysqli_num_rows($query_run);
-                                   // echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!--====Card 1- Total No of Buses===-->
-                    <!--====Card 2- Routes===-->
-                    <div class="col-md-3 mb-3">
-                        <div class="card  h-100 rounded" style="background: #8c19c2; font-weight: 600;">
-                            <div class="card-header text-light fw-bold">
-                                Routes
-                            </div>
-                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span>
-                                            <i class="fa fa-road" style="font-size: 2.5rem;"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--====Card 2- Routes===-->
-                    <!--====Card 3- Seats===-->
-                    <div class="col-md-3 mb-3">
-                        <div class="card  h-100 rounded" style="background: #8c19c2; font-weight: 600;">
-                            <div class="card-header text-light fw-bold">
-                                Seats
-                            </div>
-                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span>
-                                            <i class="bi bi-diagram-3-fill" style="font-size: 2.5rem;"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--====Card 3- Seats===-->
-                    <!--====Card 4- Customers===-->
-                    <div class="col-md-3 mb-3">
-                        <div class="card h-100 rounded" style="background: #8c19c2; font-weight: 600;">
-                            <div class="card-header text-light fw-bold">
-                                Customers
-                            </div>
-                            <div class="card-body bg-light" style="color: #8c19c2; font-weight: 600;">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <span>
-                                            <i class="fa fa-users" style="font-size: 2.5rem;"></i>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <?php
-                                    //$query ="SELECT  id FROM voters ORDER BY id";
-                                    //$query_run =mysqli_query($con, $query);
-                                    //$row = mysqli_num_rows($query_run);
-                                    //echo '<h2>'.$row.'</h2>';
-                                    ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--====Card 4- Customers===-->
-                </div>
