@@ -7,6 +7,7 @@ if(isset($_SESSION['username'])){
 }
 
 
+
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -16,7 +17,7 @@ if(isset($_POST['submit'])){
         $row = mysqli_fetch_assoc($result);
         $branch=mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
-         $_SESSION['branch'] = $branch['branch'];
+         $_SESSION['branch'] = $row['branch'];
         header("Location:home.php");
     }else {
         echo "<script>alert('Woops! Email or password is wrong.')</script>";

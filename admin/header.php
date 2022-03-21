@@ -6,7 +6,6 @@ if(!isset($_SESSION['username'])){
 header("Location:../index.php");
 }
 
-
 //===============Session Start====================
 ?>
 <!DOCTYPE html>
@@ -68,7 +67,7 @@ header("Location:../index.php");
                     <hr class="text-light">
                     <ul class="nav flex-column">
                          <li class="nav-item">
-                            <a class="nav-link" href="bookings.php">
+                            <a class="nav-link" href="home.php">
                                 <i class="fa fa-list" style="font-size: 2rem; color:  white;"></i>
                                 <span class=" text-light ml-2">Booking</span>
                             </a>
