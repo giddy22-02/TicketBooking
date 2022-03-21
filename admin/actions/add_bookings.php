@@ -7,21 +7,23 @@ session_start();
     $too = $_POST['too'];
     $date = $_POST['date'];
     $fare = $_POST['fare'];
+    $seat = $_POST['seat'];
     $regno = $_POST['regno']; 
     $driver = $_POST['driver']; 
     $admin = $_POST['admin']; 
+    $branch = $_POST['branch'];
    
         
-        $sql = "INSERT INTO bookings (fullname, phone, fromm,too,date,fare,regno,driver,admin)VALUES ('$fullname','$phone','$fromm','$too','$date','$fare','$regno','$driver','$admin')";
+        $sql = "INSERT INTO bookings (fullname, phone, fromm,too,date,fare,seat,regno,driver,admin branch)VALUES ('$fullname','$phone','$fromm','$too','$date','$fare',$seat,'$regno','$driver','$admin', '$branch')";
         $result = mysqli_query($con, $sql);
         if ($result) {
            
             $_SESSION['status'] = "Inserted Successfully";
-           header("Location: ../bookings.php");
+           header("Location: ../home.php");
         }else {
            
             $_SESSION['status'] = "Something Went wrong";
-           header("Location: ../bookings.php");
+           header("Location: ../home.php");
         }
     
 
