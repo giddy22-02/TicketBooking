@@ -91,6 +91,32 @@ include 'header.php';
                             </div>
                         </div>
                     </div>
+                     <div class="mb-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="fare">Seat No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="seat" class="form-control w-80 m-auto">
+                                    <option>--Select--</option>
+                                    <option value="seat">S01</option>
+                                    <option value="sea">S02</option>
+                                    <option value="S03">S03</option>
+                                    <option value="S04">S04</option>
+                                    <option value="S05">S05</option>
+                                    <option value="six">S06</option>
+                                    <option value="seven">S07</option>
+                                    <option value="eight">S08</option>
+                                    <option value="nine">S09</option>
+                                    <option value="ten">S10</option>
+                                    <option value="eleven">S11</option>
+                                    <option value="twelve">S12</option>
+                                    <option value="thirteen">S13</option>
+                                    <option value="fourteen">S14</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <h6>Bus's Information</h6>
                     <div class="mb-3">
                         <div class="row">
@@ -117,6 +143,10 @@ include 'header.php';
                     <div class="mb-3">
                         <input type="text" class="form-control w-80 m-auto" name="admin"
                             value="<?php echo  $_SESSION['username'];?>" required="required">
+                    </div>
+                     <div class="mb-3">
+                        <input type="text" class="form-control w-80 m-auto" name="branch"
+                            value="<?php echo  $_SESSION['branch'];?>" required="required">
                     </div>
 
                 </div>

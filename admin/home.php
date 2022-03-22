@@ -97,23 +97,23 @@ include 'header.php';
                                 <label for="fare">Seat No</label>
                             </div>
                             <div class="col-md-6">
-                             <select name="seat" class="form-control w-80 m-auto">
-                                            <option>--Select--</option>
-                                            <option value="MT_A01">MT_A01</option>
-                                            <option value="MT_A02">MT_A02</option>
-                                            <option value="MT_A03">MT_A03</option>
-                                            <option value="MT_A04">MT_A04</option>
-                                            <option value="MT_A05">MT_A05</option>
-                                            <option value="MT_A06">MT_A06</option>
-                                            <option value="MT_A07">MT_A07</option>
-                                            <option value="MT_A08">MT_A08</option>
-                                            <option value="MT_A09">MT_A09</option>
-                                            <option value="MT_A10">MT_A10</option>
-                                            <option value="MT_A11">MT_A11</option>
-                                            <option value="MT_A12">MT_A12</option>
-                                            <option value="MT_A13">MT_A13</option>
-                                            <option value="MT_A14">MT_A14</option>
-                                        </select>
+                                <select name="seat" class="form-control w-80 m-auto">
+                                    <option>--Select--</option>
+                                    <option value="one">S01</option>
+                                    <option value="seat">S02</option>
+                                    <option value="three">S03</option>
+                                    <option value="four">S04</option>
+                                    <option value="five">S05</option>
+                                    <option value="six">S06</option>
+                                    <option value="seven">S07</option>
+                                    <option value="eight">S08</option>
+                                    <option value="nine">S09</option>
+                                    <option value="ten">S10</option>
+                                    <option value="eleven">S11</option>
+                                    <option value="twelve">S12</option>
+                                    <option value="thirteen">S13</option>
+                                    <option value="fourteen">S14</option>
+                                </select>
                             </div>
                         </div>
                     </div>

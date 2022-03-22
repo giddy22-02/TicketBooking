@@ -14,16 +14,16 @@ session_start();
     $branch = $_POST['branch'];
    
         
-        $sql = "INSERT INTO bookings (fullname, phone, fromm,too,date,fare,seat,regno,driver,admin branch)VALUES ('$fullname','$phone','$fromm','$too','$date','$fare',$seat,'$regno','$driver','$admin', '$branch')";
+        $sql = "INSERT INTO bookings (fullname, phone, fromm,too,date,fare,seat,regno,driver,admin, branch)VALUES ('$fullname','$phone','$fromm','$too','$date','$fare',$seat,'$regno','$driver','$admin', '$branch')";
         $result = mysqli_query($con, $sql);
         if ($result) {
            
             $_SESSION['status'] = "Inserted Successfully";
            header("Location: ../home.php");
         }else {
-           
-            $_SESSION['status'] = "Something Went wrong";
-           header("Location: ../home.php");
+            die(mysqli_error($con));
+            //$_SESSION['status'] = "Something Went wrong";
+           //header("Location: ../home.php");
         }
     
 

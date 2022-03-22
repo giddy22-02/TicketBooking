@@ -36,6 +36,7 @@
                      <pre> <small><label for="Phone No">Phone:                 <?php echo $row['phone']?></small></pre>
                      <pre> <small><label for="from">From: <?php echo $row['fromm']?>          <label for="to">To: <?php echo $row['too']?></small></pre>
                      <pre> <small><label for="date">Date: <?php echo $row['date']?>       <label for="fare">Fare(Kshs): <?php echo $row['fare']?></small></pre>
+                     <pre> <small><label for="fullname">Seat No:             <?php echo $row['seat']?></small></pre>
                         <hr>
                 <small><p style="font-weight:bold">Bus's Information</p></small>
                      <pre> <label for="regno">Bus Reg: <?php echo $row['regno']?>      <label for="driver">Driver's Name: <?php echo $row['driver']?></pre>
