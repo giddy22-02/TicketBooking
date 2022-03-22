@@ -141,17 +141,16 @@ include 'header.php';
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control w-80 m-auto" name="admin"
+                        <input type="hidden" class="form-control w-80 m-auto" name="admin"
                             value="<?php echo  $_SESSION['username'];?>" required="required">
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control w-80 m-auto" name="branch"
+                        <input type="hidden" class="form-control w-80 m-auto" name="branch"
                             value="<?php echo  $_SESSION['branch'];?>" required="required">
                     </div>
 
                 </div>
                 <div class="modal-footer" style="background:#8c19c2; color: white;">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     <button type="submit" name="submit" class="btn btn-success">Save changes</button>
                 </div>
 
