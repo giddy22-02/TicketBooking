@@ -26,7 +26,7 @@ include 'header.php';
                 <!--Notification Message upon submission-->
             </div>
             <div class="col-md-4 text-center">
-                <!-- Modal  For Adding New Candidates-->
+                <!-- Modal  For Adding New Admins-->
                 <form action="actions/add_admins.php" method="POST" enctype="multipart/form-data" lass="p-3">
                     <div class="modal fade" id="addnew" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

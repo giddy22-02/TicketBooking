@@ -121,7 +121,7 @@ header("Location:../index.php");
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="home.php">Home</a></li>
-                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="managers">Managers</a></li>
+                        <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="managers.php">Managers</a></li>
                         <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="admins.php">Admins</a></li>
                         <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="buses.php">Buses</a></li>
                         <li class="breadcrumb-item"><a style="color:  #8c19c2;" href="routes.php">Routes</a></li>
