@@ -99,20 +99,20 @@ include 'header.php';
                             <div class="col-md-6">
                                 <select name="seat" class="form-control w-80 m-auto">
                                     <option>--Select--</option>
-                                    <option value="one">S01</option>
-                                    <option value="seat">S02</option>
-                                    <option value="three">S03</option>
-                                    <option value="four">S04</option>
-                                    <option value="five">S05</option>
-                                    <option value="six">S06</option>
-                                    <option value="seven">S07</option>
-                                    <option value="eight">S08</option>
-                                    <option value="nine">S09</option>
-                                    <option value="ten">S10</option>
-                                    <option value="eleven">S11</option>
-                                    <option value="twelve">S12</option>
-                                    <option value="thirteen">S13</option>
-                                    <option value="fourteen">S14</option>
+                                    <option value="01">S01</option>
+                                    <option value="02">S02</option>
+                                    <option value="03">S03</option>
+                                    <option value="04">S04</option>
+                                    <option value="05">S05</option>
+                                    <option value="06">S06</option>
+                                    <option value="07">S07</option>
+                                    <option value="08">S08</option>
+                                    <option value="09">S09</option>
+                                    <option value="10">S10</option>
+                                    <option value="11">S11</option>
+                                    <option value="12">S12</option>
+                                    <option value="13">S13</option>
+                                    <option value="14">S14</option>
                                 </select>
                             </div>
                         </div>
