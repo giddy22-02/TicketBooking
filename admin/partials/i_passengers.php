@@ -1,7 +1,7 @@
 <!--SQL QUERY START HERE-->
 <?php
 
- $sql ="SELECT *FROM bookings
+ $sql ="SELECT *FROM bookings WHERE fromm=''
   ORDER BY  id  DESC";
    $query =$con->query($sql);
    WHILE($row=$query->fetch_assoc())
