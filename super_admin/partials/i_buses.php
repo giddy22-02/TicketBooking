@@ -16,7 +16,7 @@
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="edit" class="btn btn-success" data-target="#addnew" value="Edit"></th>
     </form>
-    <form action="partials/delete.php" Method="POST">
+    <form action="partials/delete_bus.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="delete" class="btn btn-danger" value="Delete"></th>
     </form>
