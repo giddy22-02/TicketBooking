@@ -14,14 +14,14 @@
     <!-- keywords -->
     <meta name="keywords" content="Voters, votes, voting">
     <!--Bootstrap files-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/dataTables.bootstrap5.min.css" />
     <!-- font-awesome icon -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--Custom CSS File-->
-    <link rel="stylesheet" href="../" />
+    <link rel="stylesheet" href="../../assets/css/styl.css" />
 </head>
 
 <body class="bg-dark">
@@ -33,10 +33,9 @@ include ('../../actions/connect.php');
  $id = $_POST['id'];
 
     $query = "SELECT* FROM bookings WHERE id ='$id'";
-    $query_run = mysqli_query($con, $query);
-    
-    if($query_run){
-        while($row = mysqli_fetch_array($query_run))
+    $result = mysqli_query($con, $query);
+    if($result){
+        while($row = mysqli_fetch_array($result))
         {
             ?>
     <div class="container text-center my-5 d-flex justify-content-center">
@@ -44,46 +43,69 @@ include ('../../actions/connect.php');
 
             <hr>
             <!-- Modal  For Adding New Candidates-->
-            <form class="my-5" action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:400px;">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <!--Notification Message upon submission-->
+                        <?php
+                if(isset($_SESSION['status']))
+                {?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey!</strong>
+                            <?php echo $_SESSION['status']; ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            </button>
+                        </div>
+                        <?php
+                    unset($_SESSION['status']);
+                }?>
+                        <!--Notification Message upon submission-->
+
+                    </div>
+                </div>
+            </div>
+
+            <form class="my-5" action="" method="POST" enctype="multipart/form-data" lass="p-3" style="width:500px;">
+
                 <h4 class="text-center">Update Data</h4>
                 <input type="hidden" name="id" value="<?php echo $row['id']?>">
-               
+
                 <div class="mb-3">
                     <input type="text" class="form-control w-80 m-auto" name="fullname"
                         value="<?php echo $row['fullname']?>" required="required">
                 </div>
                 <div class="mb-3">
-                    <input type="number" class="form-control w-80 m-auto" name="phone" value="<?php echo $row['phone']?>"
-                         required="required" minlength="10" maxlength="10">
+                    <input type="number" class="form-control w-80 m-auto" name="phone"
+                        value="<?php echo $row['phone']?>" required="required" minlength="10" maxlength="10">
                 </div>
                 <div class="mb-3">
                     <input type="text" class="form-control w-80 m-auto" name="too" value="<?php echo $row['too']?>"
-                         required="required">
+                        required="required">
                 </div>
                 <div class="mb-3">
                     <input type="date" class="form-control w-80 m-auto" name="date" value="<?php echo $row['date']?>"
-                       required="required">
+                        required="required">
                 </div>
                 <div class="mb-3">
                     <input type="number" class="form-control w-80 m-auto" name="fare" value="<?php echo $row['fare']?>">
                 </div>
                 <div class="mb-3">
                     <select name="seat" class="form-control w-80 m-auto" value="<?php echo $row['seat']?>">
-                       <option>--Select--</option>
-                                    <option value="01">S01</option>
-                                    <option value="02">S02</option>
-                                    <option value="03">S03</option>
-                                    <option value="04">S04</option>
-                                    <option value="05">S05</option>
-                                    <option value="06">S06</option>
-                                    <option value="07">S07</option>
-                                    <option value="08">S08</option>
-                                    <option value="09">S09</option>
-                                    <option value="10">S10</option>
-                                    <option value="11">S11</option>
-                                    <option value="12">S12</option>
-                                    <option value="13">S13</option>
-                                    <option value="14">S14</option>
+                        <option>--Select--</option>
+                        <option value="01">S01</option>
+                        <option value="02">S02</option>
+                        <option value="03">S03</option>
+                        <option value="04">S04</option>
+                        <option value="05">S05</option>
+                        <option value="06">S06</option>
+                        <option value="07">S07</option>
+                        <option value="08">S08</option>
+                        <option value="09">S09</option>
+                        <option value="10">S10</option>
+                        <option value="11">S11</option>
+                        <option value="12">S12</option>
+                        <option value="13">S13</option>
+                        <option value="14">S14</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -91,12 +113,13 @@ include ('../../actions/connect.php');
                         required="required">
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control w-80 m-auto" name="driver" value="<?php echo $row['driver']?>"
-                       required="required">
+                    <input type="text" class="form-control w-80 m-auto" name="driver"
+                        value="<?php echo $row['driver']?>" required="required">
                 </div>
                 <div class="mb-3">
                     <a href="../home.php" class="btn btn-danger">Cancel</a>
-                    <button type="submit" name="update" class="btn btn-primary">Save changes</button>
+                    <a class="btn btn-primary" href="../home.php" type="submit" name="update">Save</a>
+                    <button type="submit" name="update" class="btn btn-primary"> Save changes</button>
                 </div>
         </div>
         </form>
@@ -126,10 +149,10 @@ include ('../../actions/connect.php');
               $query_run = mysqli_query($con, $query);
                if($query_run){
                    $_SESSION['status'] = "Updated Successfully";
-                   header("Location: ../home.php");
+                  location('updatedata.php');
                 }else{
                     $_SESSION['status'] = "There was an error, Try Again";
-                    header("Location: ../home.php");
+                  
                 }
         }
         ?>
