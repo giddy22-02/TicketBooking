@@ -15,7 +15,7 @@
     <td><?php echo $row['regno'];?></td>
     <td><?php echo $row['driver'];?></td>
 
-    <form action="actions/edit.php" Method="POST">
+    <form action="partials/updatedata.php" Method="POST">
         <input type="hidden" name="id" value="<?php echo $row['id']?>">
         <th><input type="submit" name="edit" class="btn btn-success" data-target="#addnew" value="Edit"></th>
     </form>

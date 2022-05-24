@@ -151,7 +151,7 @@ include 'header.php';
 
                 </div>
                 <div class="modal-footer" style="background:#8c19c2; color: white;">
-                    <button type="submit" name="submit" class="btn btn-success">Save changes</button>
+                    <button type="submit" name="submit" class="btn btn-success">Book Now</button>
                 </div>
 
             </div>
